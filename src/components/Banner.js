@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import headerImg from "../assets/img/header-img.png";
+import headerImg from "../assets/img/header-img.gif";
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ["Frontent Developer", "Backend Developer", "Full Stack Developer"];
+    const toRotate = ["Web Developer", "Backend Developer", "Full Stack Developer"];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const period= 2000;
@@ -46,7 +46,7 @@ export const Banner = () => {
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
                         <span className="tagline">Portofolio</span>
-                        <h1>{`Hi I'm Raoul Covaci `}<br /><span className="wrap">{text}</span></h1>
+                        <h1>{`Hi I'm Raoul Covaci `}<br /><div class="auto-height"><span className="wrap">{`` + text}</span></div></h1>
                         <p>Checkout my new Portofolio</p>
                         <button onClick={() => console.log('connect')}> Connect <ArrowRightCircle size={25} /></button>
                     </Col>
